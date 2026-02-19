@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 6 | Scripts: 1 | Modules: 0 | Tags: 0
+-- Instances: 9 | Scripts: 2 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.projectfynxziloader
@@ -66,10 +66,34 @@ by fynxzi the best executor
 for roblox exploiters]];
 
 
+-- StarterGui.projectfynxziloader.main logo.TextButton
+G2L["7"] = Instance.new("TextButton", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0, 113, 0, 113);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[]];
+
+
+-- StarterGui.projectfynxziloader.main logo.TextButton.UICorner
+G2L["8"] = Instance.new("UICorner", G2L["7"]);
+G2L["8"]["CornerRadius"] = UDim.new(1, 0);
+
+
+-- StarterGui.projectfynxziloader.main logo.TextButton.LocalScript
+G2L["9"] = Instance.new("LocalScript", G2L["7"]);
+
+
+
 -- StarterGui.projectfynxziloader.main logo.LocalScript
 local function C_4()
 local script = G2L["4"];
 	local logo = script.Parent
+	local button = script.Parent.TextButton
 	local TweenService = game:GetService("TweenService")
 	
 	local tweenInfo = TweenInfo.new(
@@ -82,11 +106,22 @@ local script = G2L["4"];
 	local goal = {}
 	goal.Position = UDim2.new(0, 0, 1, -logo.Size.Y.Offset)
 	
-	local tween = TweenService:Create(logo, tweenInfo, goal)
+	local tween = TweenService:Create(logo, tweenInfo, goal,button)
 	tween:Play()
 	wait(1)
 	script.Parent.Frame.Visible = true
 end;
 task.spawn(C_4);
+-- StarterGui.projectfynxziloader.main logo.TextButton.LocalScript
+local function C_9()
+local script = G2L["9"];
+	local button = script.Parent
+	local frame = script.Parent.Parent.Frame
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = not frame.Visible
+	end)
+end;
+task.spawn(C_9);
 
 return G2L["1"], require;
