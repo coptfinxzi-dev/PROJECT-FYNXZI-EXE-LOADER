@@ -16,7 +16,7 @@ G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
 G2L["1"]["Name"] = [[projectfynxziloader]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"][ResetOnSpawn] = false;
+G2L["1"]["ResetOnSpawn"] = false;
 
 
 -- StarterGui.projectfynxziloader.main logo
